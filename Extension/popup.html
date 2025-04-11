@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Translate & Listen</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="theme-toggle">
+        <button id="themeToggle">Dark Mode</button>
+    </div>
+    <h2>Translate Selected Text</h2>
+    
+    <textarea id="inputText" placeholder="Select text on a webpage"></textarea>
+
+    <label for="language">Select Language:</label>
+    <select id="language">
+        <option value="es">Spanish</option>
+        <option value="fr">French</option>
+        <option value="de">German</option>
+        <option value="zh">Chinese</option>
+    </select>
+
+    <button id="translateBtn">Translate</button>
+    <button id="listenBtn">Listen</button>
+
+    <h3>Translated Text:</h3>
+    <p id="translatedText"></p>
+
+    <h3>Translation History</h3>
+    <button id="historyBtn">Show History</button>
+    <ul id="historyList"></ul>
+
+    <script src="popup.js"></script>
+</body>
+</html>

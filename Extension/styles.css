@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --bg-color: #f5f6fa;
+    --text-color: #2d3436;
+    --card-bg: white;
+    --border-color: #dfe6e9;
+    --hover-bg: #f8f9fa;
+    --stat-number: #0984e3;
+    --stat-label: #636e72;
+    --shadow: rgba(0, 0, 0, 0.1);
+    --primary-color: #0984e3;
+    --input-bg: var(--card-bg);
+}
+
+body.dark-theme {
+    --bg-color: #1a1a1a;
+    --text-color: #e0e0e0;
+    --card-bg: #2d2d2d;
+    --border-color: #404040;
+    --hover-bg: #363636;
+    --stat-number: #60a5fa;
+    --stat-label: #a0a0a0;
+    --shadow: rgba(0, 0, 0, 0.3);
+    --primary-color: #60a5fa;
+    --input-bg: var(--card-bg);
+}
+
+body {
+    width: 350px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    padding: 16px;
+    box-shadow: 0 4px 6px var(--shadow);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+h2, h3 {
+    color: var(--text-color);
+    margin-bottom: 12px;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.theme-toggle {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}
+
+#themeToggle {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    padding: 4px 8px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: all 0.3s;
+    width: auto;
+}
+
+#themeToggle:hover {
+    background: var(--hover-bg);
+    border-color: var(--primary-color);
+}
+
+textarea, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 0.9rem;
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    margin-bottom: 12px;
+    transition: all 0.3s;
+}
+
+textarea {
+    height: 60px;
+    resize: none;
+}
+
+textarea:focus, select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(9, 132, 227, 0.1);
+}
+
+button {
+    width: 100%;
+    margin: 8px 0;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+button:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+#translatedText, #statisticsText {
+    background: var(--card-bg);
+    padding: 12px;
+    border-radius: 8px;
+    margin: 12px 0;
+    border: 1px solid var(--border-color);
+}
+
+#historyList {
+    list-style: none;
+    margin-top: 12px;
+}
+
+#historyList li {
+    background: var(--card-bg);
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    border: 1px solid var(--border-color);
+    font-size: 0.9rem;
+}
+
+#historyList li:hover {
+    background: var(--hover-bg);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text-color);
+    font-size: 0.9rem;
+}
